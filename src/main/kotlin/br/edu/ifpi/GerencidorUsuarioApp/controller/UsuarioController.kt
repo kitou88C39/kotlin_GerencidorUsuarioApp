@@ -7,7 +7,9 @@ class UsuarioController {
     @GetMapping("/formulario/cadastro")
     fun abrirFormularioCadastro(model: Model): String {
 
-        val usuario: Usuario
+        val usuario = Usuario()
+
+        model.addAttribute("usuario", usuario)
 
         return "formulario-cadastro"   
     }
