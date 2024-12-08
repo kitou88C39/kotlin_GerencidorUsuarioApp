@@ -13,4 +13,9 @@ class UsuarioController {
 
         return "formulario-cadastro"   
     }
+
+    @PostMapping("/cadastrar")
+    fun cadastrarUsuario(usuario: Usuario):String{
+
+    }
 }
