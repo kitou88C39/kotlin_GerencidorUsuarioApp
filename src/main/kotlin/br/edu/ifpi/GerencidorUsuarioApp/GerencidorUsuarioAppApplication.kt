@@ -1,4 +1,4 @@
-package br.edu.ifpi.GerencidorUsuarioApp
+package br.edu.ifpi.GerencidorUsuarioApp.controller
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
