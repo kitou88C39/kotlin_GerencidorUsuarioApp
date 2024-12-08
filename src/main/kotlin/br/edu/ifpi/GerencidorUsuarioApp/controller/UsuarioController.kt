@@ -5,7 +5,9 @@ import org.springframework.stereotype.Controller
 class UsuarioController {
 
     @GetMapping("/formulario/cadastro")
-    fun abrirFormularioCadastro(): String {
+    fun abrirFormularioCadastro(model: Model): String {
+
+        val usuario: Usuario
 
         return "formulario-cadastro"   
     }
