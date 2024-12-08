@@ -5,9 +5,6 @@ class Usuario (
     var email: String = "",
     var cpf: String = "",
     var papel: String = "",
-
-
-
 ){
 
 }
