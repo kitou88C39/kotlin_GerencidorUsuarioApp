@@ -1,6 +1,6 @@
 package br.edu.ifpi.GerencidorUsuarioApp.model
 
-class Usuario (
+data class Usuario (
     var nome: String = "",
     var email: String = "",
     var cpf: String = "",

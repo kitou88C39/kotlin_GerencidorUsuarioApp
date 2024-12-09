@@ -17,5 +17,8 @@ class UsuarioController {
     @PostMapping("/cadastrar")
     fun cadastrarUsuario(usuario: Usuario):String{
 
+        println(usuario)
+        return "home"
+
     }
 }
