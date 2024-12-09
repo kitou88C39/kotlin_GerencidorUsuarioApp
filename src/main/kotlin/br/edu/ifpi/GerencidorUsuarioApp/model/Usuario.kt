@@ -10,11 +10,13 @@ data class Usuario (
     var email: String = "",
 
     @field:NotBlank(message = "Cpf e obrigatorio")
-    @field:Email(message = "Cpf invalido")
+    @field:CPF(message = "Cpf invalido")
     var cpf: String = "",
 
-
+    @field:NotBlank(message = "senha e obrigatorio")
+    @field:Size(min=6, max=12, message = "A senha deve ter entre 6 e 12 caracteres")
     var senha: String = "",
+
     var papel: String = ""
 ){
 
