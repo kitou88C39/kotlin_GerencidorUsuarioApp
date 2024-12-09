@@ -15,7 +15,11 @@ class UsuarioController {
     }
 
     @PostMapping("/cadastrar")
-    fun cadastrarUsuario(usuario: Usuario):String{
+    fun cadastrarUsuario(@Validated usuario: Usuario, result: BindingResult):String{
+
+        if(result.hasErrors()){
+            return "formulario-cadastro"
+        }
 
         println(usuario)
         return "home"
