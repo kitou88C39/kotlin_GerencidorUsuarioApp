@@ -4,6 +4,9 @@ import org.springframework.stereotype.Controller
 @Controller
 class UsuarioController {
 
+    @Autowired
+    lateinit var repositorio: UsuarioRepository
+
     @GetMapping("/formulario/cadastro")
     fun abrirFormularioCadastro(model: Model): String {
 
