@@ -4,7 +4,11 @@ import jakarta.Validation.constraints.NotBlank
 import jakarta.Validation.constraints.Size
 import org.hibernate.Validator.constraints.br.CPF
 
+@Entity
 data class Usuario (
+
+    @Id
+    var id: Long? = null,
 
     @field:NotBlank(message = "Nome e obrigatorio")
     var nome: String = "",
