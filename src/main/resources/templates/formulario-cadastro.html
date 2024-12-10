@@ -70,6 +70,11 @@
             placeholder="Senha"
             th:field="*{senha}"
           />
+          <div
+            class="alert alert-danger"
+            th:if="${#fields.hasErrors('senha')}"
+            th:errors="*{senha}"
+          ></div>
         </div>
 
         <div class="mb-3">
