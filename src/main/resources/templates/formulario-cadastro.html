@@ -21,7 +21,12 @@
             name="nome"
             placeholder="Nome"
             th:field="*{nome}"
+            th:errors="*{nome}"
           />
+          <div
+            class="alert alert-danger"
+            th:field="${#fields.hasErrors('nome')}"
+          ></div>
         </div>
 
         <div class="mb-3">
