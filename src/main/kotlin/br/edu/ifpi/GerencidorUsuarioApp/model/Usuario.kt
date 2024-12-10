@@ -1,5 +1,9 @@
 package br.edu.ifpi.GerencidorUsuarioApp.model
 
+import jakarta.Validation.constraints.NotBlank
+import jakarta.Validation.constraints.Size
+import org.hibernate.Validator.constraints.br.CPF
+
 data class Usuario (
 
     @field:NotBlank(message = "Nome e obrigatorio")
