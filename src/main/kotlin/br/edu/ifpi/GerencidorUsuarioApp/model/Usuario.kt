@@ -8,6 +8,7 @@ import org.hibernate.Validator.constraints.br.CPF
 data class Usuario (
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long? = null,
 
     @field:NotBlank(message = "Nome e obrigatorio")
