@@ -21,11 +21,11 @@
             name="nome"
             placeholder="Nome"
             th:field="*{nome}"
-            th:errors="*{nome}"
           />
           <div
             class="alert alert-danger"
-            th:field="${#fields.hasErrors('nome')}"
+            th:if="${#fields.hasErrors('nome')}"
+            th:errors="*{nome}"
           ></div>
         </div>
 
@@ -38,6 +38,11 @@
             placeholder="Email"
             th:field="*{email}"
           />
+          <div
+            class="alert alert-danger"
+            th:if="${#fields.hasErrors('nome')}"
+            th:errors="*{nome}"
+          ></div>
         </div>
 
         <div class="mb-3">
