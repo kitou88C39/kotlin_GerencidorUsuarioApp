@@ -40,8 +40,8 @@
           />
           <div
             class="alert alert-danger"
-            th:if="${#fields.hasErrors('nome')}"
-            th:errors="*{nome}"
+            th:if="${#fields.hasErrors('email')}"
+            th:errors="*{email}"
           ></div>
         </div>
 
@@ -54,6 +54,11 @@
             placeholder="Cpf"
             th:field="*{cpf}"
           />
+          <div
+            class="alert alert-danger"
+            th:if="${#fields.hasErrors('cpf')}"
+            th:errors="*{cpf}"
+          ></div>
         </div>
 
         <div class="mb-3">
