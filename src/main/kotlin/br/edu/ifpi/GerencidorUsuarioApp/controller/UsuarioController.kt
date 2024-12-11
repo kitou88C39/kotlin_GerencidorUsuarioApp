@@ -25,6 +25,8 @@ class UsuarioController {
         }
 
         println(usuario)
+        repositorio.save(usuario)
+        
         return "home"
 
     }
