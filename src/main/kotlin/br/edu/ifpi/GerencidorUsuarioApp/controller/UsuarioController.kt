@@ -26,8 +26,11 @@ class UsuarioController {
 
         println(usuario)
         repositorio.save(usuario)
-        
-        return "home"
 
+        return "home"
+    }
+
+    fun abrirHome(): String{
+        return "home"
     }
 }
