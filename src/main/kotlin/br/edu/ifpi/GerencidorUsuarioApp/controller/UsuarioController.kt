@@ -30,10 +30,11 @@ class UsuarioController {
         return "home"
     }
 
-    @GetMapping(/home)
-    fun abrirHome(): String{
+    @GetMapping("/home")
+    fun abrirHome(model: Model): String{
 
         val usuarios = repositorio.findAll()
+        model.addAttribute("usuarios", usuarios)
         return "home"
     }
 }
