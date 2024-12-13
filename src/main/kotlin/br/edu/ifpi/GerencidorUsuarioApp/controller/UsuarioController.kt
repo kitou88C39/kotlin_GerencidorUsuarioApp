@@ -18,7 +18,7 @@ class UsuarioController {
     }
 
     @PostMapping("/cadastrar")
-    fun cadastrarUsuario(@Validated usuario: Usuario, result: BindingResult):String{
+    fun cadastrarUsuario(@Validated usuario: Usuario, result: BindingResult): String{
 
         if(result.hasErrors()){
             return "formulario-cadastro"
@@ -27,7 +27,7 @@ class UsuarioController {
         println(usuario)
         repositorio.save(usuario)
 
-        return "home"
+        return "redirect:/home"
     }
 
     @GetMapping("/home")
