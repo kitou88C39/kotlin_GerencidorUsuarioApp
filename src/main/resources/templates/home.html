@@ -39,7 +39,7 @@
             <td th:text="${user.cpf}"></td>
             <td th:text="${user.papel}"></td>
             <td>
-              <a href="#" class="btn btn-primary"
+              <a th:href="@{/Formulario/edicao/{id}(id = ${user.id})}" class="btn btn-primary"
                 ><i class="bi bi-pencil"></i
               ></a>
               <a href="#" class="btn btn-danger"
