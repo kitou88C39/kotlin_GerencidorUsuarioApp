@@ -38,11 +38,11 @@ class UsuarioController {
         return "home"
     }
 
-    @GetMapping("/home")
-    fun abrirHome(model: Model): String{
+    @GetMapping("/formulario/edicao")
+    fun abrirFormularioCadastro(model: Model): String{
 
         val usuarios = repositorio.findAll()
         model.addAttribute("usuarios", usuarios)
-        return "home"
+        return "formulario-edicao"
     }
 }
