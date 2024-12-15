@@ -58,12 +58,10 @@ class UsuarioController {
         return "redirect:/home"
     }
 
-    @PostMapping("/editar/{id}")
-    fun editarUsurio(usuario: Usuario, @PathVariable("id") id: Long, model:Model): String{
+    @GetMapping("/excluir/{id}")
+    fun excluirUsurio(@PathVariable("id") id: Long): String{
 
-        usuario.id = id 
-
-        repositorio.save(usuario)
+        repositorio.save(id)
 
         return "redirect:/home"
     }
