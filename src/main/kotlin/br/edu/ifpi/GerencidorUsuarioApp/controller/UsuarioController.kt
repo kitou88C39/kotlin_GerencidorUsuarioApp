@@ -43,6 +43,8 @@ class UsuarioController {
 
         val usuario = repositorio.findById(id).orElse(null)
 
+        model.addAttribute("usuario", usuario)
+
         return "formulario-edicao"
     }
 }
