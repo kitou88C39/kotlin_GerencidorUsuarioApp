@@ -42,7 +42,7 @@
               <a th:href="@{/Formulario/edicao/{id}(id = ${user.id})}" class="btn btn-primary"
                 ><i class="bi bi-pencil"></i
               ></a>
-              <a href="#" class="btn btn-danger"
+              <a th:href="@{/excluir/{id}(id = ${user.id})}" class="btn btn-danger"
                 ><i class="bi bi-trash3"></i
               ></a>
             </td>
