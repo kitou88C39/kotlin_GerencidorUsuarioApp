@@ -51,7 +51,7 @@ class UsuarioController {
     @PostMapping("/editar/{id}")
     fun editarUsurio(usuario: Usuario, @PathVariable("id") id: Long, model:Model): String{
 
-        val usuario = repositorio.findById(id).orElse(null)
+        usuario.id = id 
 
         repositorio.save(usuario)
 
