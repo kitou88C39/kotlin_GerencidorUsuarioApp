@@ -14,7 +14,11 @@
     <div class="container">
       <h2>Formulario de Cadastro</h2>
 
-      <form th:object="${usuario}" method="post" action="/editar">
+      <form
+        th:object="${usuario}"
+        method="post"
+        th:action="@{/editar/{id}(id = ${usuario.id})}"
+      >
         <div class="mb-3">
           <input
             class="form-control"
