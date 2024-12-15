@@ -49,11 +49,11 @@ class UsuarioController {
     }
     
     @PostMapping("/editar/{id}")
-    fun editarUsurio(@PathVariable("id") id: Long, model:Model): String{
+    fun editarUsurio(usuario: Usuario, @PathVariable("id") id: Long, model:Model): String{
 
         val usuario = repositorio.findById(id).orElse(null)
 
-        model.addAttribute("usuario", usuario)
+        repositorio.save(usuario)
 
         return "redirect:/home"
     }
